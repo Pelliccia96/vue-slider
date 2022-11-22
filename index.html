@@ -18,7 +18,7 @@
             <h1>{{name}}</h1>
         </div>
         <div class="container">
-            <div class="slider-wrapper" tabindex="0">
+            <div class="slider-wrapper" tabindex="0" @mouseover="stopTimer" @mouseleave="startTimer">
 
                 <div class="item">
                     <img v-bind:src="slides[currentIndex].image" alt="" />

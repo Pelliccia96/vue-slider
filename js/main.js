@@ -48,5 +48,15 @@ createApp ({
         onThumbnailClick (clickedIndex) {
             this.currentIndex = clickedIndex;
         },
+
+        stopTimer() {
+            clearInterval(myInterval);
+        },
+        startTimer() {
+            myInterval = setInterval(this.goNext, 3000);
+        }
+    },
+    mounted() {
+        this.startTimer();
     }
 }).mount("#app");
